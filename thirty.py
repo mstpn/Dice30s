@@ -92,9 +92,10 @@ class Board:
         if player is None:
             name = input("Enter player name: ")
             human = input("Is {} a human player? (y/n): ".format(name))
+            is_human = True
             if human == "n":
                 is_human = False
-            self.players.append(Player(name), is_human)
+            self.players.append(Player(name, is_human))
         else:
             self.players.append(player)
         self.num_players += 1
